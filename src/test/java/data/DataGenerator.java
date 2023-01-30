@@ -29,7 +29,7 @@ public class DataGenerator {
     public static String generateName(String locale) {
         // TODO: добавить логику для объявления переменной name и задания её значения, для генерации можно
         var faker = new Faker(new Locale(locale));
-        return faker.name().lastName() + "Наиля Иванова" + faker.name().firstName();
+
     }
 
     public static String generatePhone(String locale) {
@@ -45,7 +45,7 @@ public class DataGenerator {
         public static UserInfo generateUser(String locale) {
             // TODO: добавить логику для создания пользователя user с использованием методов generateCity(locale),
             // generateName(locale), generatePhone(locale)
-            return new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale);
+            return new UserInfo(generateCity(locale), generateName(locale), generatePhone(locale));
         }
     }
 

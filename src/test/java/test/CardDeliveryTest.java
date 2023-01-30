@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-class DeliveryTest {
+class CardDeliveryTest {
 
     @BeforeEach
     void setup() {
@@ -40,7 +40,7 @@ class DeliveryTest {
         $("[data-test-id='success-notification') .notification__content")
                 .shouldHave(exactText("Встреча успешно запланирована на " + firstMeetingDate))
                 .shouldBe(visible);
-        $("[data-test-id=data] input").sendKeys(Keys.chord((Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
+        $("[data-test-id=data] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id=data] input").setValue(secondMeetingDate);
         $(byText("Запланировать")).click();
         $("[data-test-id='replan-notification'] .notification__content")
